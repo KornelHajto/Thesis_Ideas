@@ -1,0 +1,269 @@
+% Created 2025-05-16 Fri 19:49
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\author{Kornel Hajto}
+\date{2025}
+\title{Challenging Thesis Ideas in Software Development, Cybersecurity, Gaming, and Web Scraping}
+\hypersetup{
+ pdfauthor={Kornel Hajto},
+ pdftitle={Challenging Thesis Ideas in Software Development, Cybersecurity, Gaming, and Web Scraping},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 30.1 (Org mode 9.7.29)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\section{Introduction}
+\label{sec:org72e8a1a}
+This document presents a curated list of advanced and challenging thesis topics spanning software development, cybersecurity, gaming, and web scraping. Emphasizing cutting-edge technologies such as artificial intelligence (AI), blockchain, quantum computing, and ethical computing, these ideas reflect recent research trends and industry needs. Projects range from advanced threat intelligence systems and post-quantum cryptography implementations to innovative, privacy-conscious web scraping techniques. The goal is to inspire research that combines technical rigor with practical impact.
+\section{1. AI-Driven Anti-Cheat Systems for Multiplayer Games}
+\label{sec:org33576b8}
+\subsection{Motivation}
+\label{sec:orgcd8f9d9}
+Cheating in multiplayer games undermines fair play, damages community trust, and causes substantial financial losses. Modern cheat tools increasingly leverage AI (e.g., AI-powered aimbots), evolving faster than conventional detection methods. Traditional heuristics and rule-based anti-cheat systems struggle to keep pace with such sophisticated attacks.
+\subsection{Research Objective}
+\label{sec:org0244f52}
+Develop an adaptive AI-based anti-cheat system that detects cheating behavior by analyzing in-game telemetry data, such as mouse movements, aiming patterns, and player statistics (kill/death ratios), identifying subtle anomalies indicative of cheating.
+\subsection{Methodology}
+\label{sec:org5c664ae}
+\begin{itemize}
+\item Collect large-scale, anonymized gameplay telemetry data.
+\item Design and train machine learning models to classify player behavior patterns, distinguishing legitimate from malicious actions.
+\item Employ federated learning to allow model training across decentralized player devices, preserving privacy and reducing central data aggregation risks.
+\item Validate detection accuracy with real-world datasets and controlled cheat simulations.
+\end{itemize}
+\subsection{Expected Contributions}
+\label{sec:org5cdcb91}
+\begin{itemize}
+\item A novel, privacy-preserving framework for anti-cheat detection.
+\item Demonstration of federated learning applicability in real-time gaming environments.
+\item Enhanced robustness against evolving AI-driven cheats.
+\end{itemize}
+\section{2. Ethical Web Scraping with Advanced Anti-Detection Techniques}
+\label{sec:org778612f}
+\subsection{Motivation}
+\label{sec:org9ddf2a9}
+As websites increasingly deploy sophisticated bot detection systems (e.g., Cloudflare Bot Management) leveraging AI and fingerprinting, traditional scraping tools face blocking and throttling. Ethical scraping must balance data acquisition with respect for site policies, privacy, and legal frameworks.
+\subsection{Research Objective}
+\label{sec:orgdf03103}
+Design a reinforcement learning (RL)-based web scraper that mimics authentic human browsing behavior, thereby minimizing detection risk while adhering to ethical guidelines.
+\subsection{Methodology}
+\label{sec:orga1e9d16}
+\begin{itemize}
+\item Develop an RL agent trained to replicate human-like browsing patterns: random click timing, variable scroll speeds, navigation irregularities.
+\item Integrate anonymity layers using Tor proxies combined with Puppeteer-extra-stealth to mask fingerprinting signals.
+\item Implement rate-limiting and politeness policies respecting robots.txt and API usage guidelines.
+\item Evaluate effectiveness against state-of-the-art bot detection services.
+\end{itemize}
+\subsection{Expected Contributions}
+\label{sec:orgbeda02d}
+\begin{itemize}
+\item A generalizable framework for ethical, human-like web scraping.
+\item Strategies to bypass AI-driven bot detectors without compromising ethical standards.
+\item Open-source tools supporting privacy-respecting data collection.
+\end{itemize}
+\section{3. Automated Vulnerability Detection Using Large Language Models (LLMs)}
+\label{sec:org2430a32}
+\subsection{Motivation}
+\label{sec:org6ff8bf1}
+Despite advancements in static code analysis, a significant portion of vulnerabilities (e.g., race conditions, memory leaks) remain undetected, especially in complex distributed systems. Large language models (LLMs) show promise in understanding code semantics and context beyond syntactic checks.
+\subsection{Research Objective}
+\label{sec:orgb1cfda1}
+Create a hybrid vulnerability detection system combining LLMs (e.g., CodeLlama) with symbolic execution to identify complex vulnerabilities such as race conditions in distributed and concurrent systems.
+\subsection{Methodology}
+\label{sec:org6ece791}
+\begin{itemize}
+\item Fine-tune LLMs on curated datasets of known vulnerabilities, emphasizing CWE Top 25 categories.
+\item Integrate symbolic execution engines to validate potential vulnerabilities flagged by the LLM.
+\item Utilize Retrieval-Augmented Generation (RAG) to combine real-time knowledge retrieval with model inference for accurate detection.
+\item Benchmark against existing static and dynamic analysis tools.
+\end{itemize}
+\subsection{Expected Contributions}
+\label{sec:org577e1cb}
+\begin{itemize}
+\item Enhanced detection accuracy for subtle, hard-to-detect vulnerabilities.
+\item Novel hybrid approach merging neural and formal methods.
+\item Dataset and evaluation benchmarks for vulnerability research.
+\end{itemize}
+\section{4. Blockchain for Secure and Transparent In-Game Economies}
+\label{sec:orgee93ab5}
+\subsection{Motivation}
+\label{sec:orgd8b5d4c}
+The rise of blockchain-based assets and NFTs in gaming has introduced new risks, including fraud and scams, leading to over \$100M in losses in 2024 alone. Ensuring secure, transparent, and low-cost transactions in in-game economies is critical.
+\subsection{Research Objective}
+\label{sec:orgc106b38}
+Design a scalable, privacy-preserving blockchain infrastructure (leveraging Layer-2 solutions like Polygon and zkRollups) to secure item trading and enforce smart contract-based trade policies, mitigating fraud and abuse.
+\subsection{Methodology}
+\label{sec:org1cd0808}
+\begin{itemize}
+\item Implement Layer-2 blockchain architecture to ensure low fees and fast transaction times.
+\item Integrate zero-knowledge rollups (zkRollups) to provide privacy for sensitive trades.
+\item Develop smart contracts enforcing trade cooldowns, ownership verification, and fraud detection triggers.
+\item Test system on simulated game marketplaces with real user interaction patterns.
+\end{itemize}
+\subsection{Expected Contributions}
+\label{sec:org1f75128}
+\begin{itemize}
+\item A secure, efficient framework for decentralized in-game economies.
+\item Privacy-preserving transaction methods applicable beyond gaming.
+\item Mitigation strategies for NFT fraud in digital asset markets.
+\end{itemize}
+\section{5. Dark Web Scraping for Real-Time Threat Intelligence}
+\label{sec:org6cdf62d}
+\subsection{Motivation}
+\label{sec:orgff81578}
+Dark web forums are prime sources of early disclosures for zero-day exploits and cybercriminal activities. Approximately 40\% of zero-day vulnerabilities appear first on these platforms, presenting a critical opportunity for preemptive defense.
+\subsection{Research Objective}
+\label{sec:org62c5e2e}
+Develop a natural language processing (NLP) pipeline based on GPT-4 to extract, interpret, and correlate dark web chatter with public vulnerability databases (e.g., CVE), enabling real-time threat intelligence dashboards.
+\subsection{Methodology}
+\label{sec:org00d2925}
+\begin{itemize}
+\item Collect and preprocess multilingual dark web forum data with ethical and legal compliance.
+\item Train NLP models to decode slang, jargon, and obfuscated references common in cybercrime communities.
+\item Correlate detected mentions with existing CVE entries using Elasticsearch for search efficiency.
+\item Visualize threats in real-time with Kibana dashboards for security analysts.
+\end{itemize}
+\subsection{Expected Contributions}
+\label{sec:org9874987}
+\begin{itemize}
+\item Advanced NLP models tailored to dark web vernacular.
+\item Real-time, actionable cyber threat intelligence tools.
+\item Frameworks for ethical scraping of sensitive data sources.
+\end{itemize}
+\section{6. Quantum-Resistant Cryptography for IoT in Smart Cities}
+\label{sec:orgbc8fbac}
+\subsection{Motivation}
+\label{sec:orga832a8b}
+The advent of quantum computing threatens current cryptographic standards, risking security for billions of IoT devices in smart cities that manage critical infrastructure (e.g., traffic control, utilities). Post-quantum cryptography (PQC) adoption is essential for future-proofing.
+\subsection{Research Objective}
+\label{sec:org5f64391}
+Implement and benchmark lattice-based PQC algorithms (e.g., CRYSTALS-Kyber) for authentication in resource-constrained IoT devices within smart city environments.
+\subsection{Methodology}
+\label{sec:orga27ffd2}
+\begin{itemize}
+\item Deploy PQC algorithms on Raspberry Pi clusters simulating typical IoT hardware.
+\item Measure computational performance, energy consumption, and communication overhead.
+\item Develop lightweight authentication protocols balancing security and efficiency.
+\item Test resilience against quantum attack models.
+\end{itemize}
+\subsection{Expected Contributions}
+\label{sec:org494a891}
+\begin{itemize}
+\item Empirical performance data guiding PQC adoption in IoT.
+\item Protocol designs suitable for large-scale smart city deployments.
+\item Roadmap for integrating quantum-safe security into existing IoT frameworks.
+\end{itemize}
+\section{7. AI-Powered Threat Detection in Autonomous Vehicles}
+\label{sec:orge8f15cc}
+\subsection{Motivation}
+\label{sec:orgde8dfee}
+Autonomous vehicles rely on sensor data (LiDAR, cameras) vulnerable to adversarial manipulation, which can cause critical safety failures. Proactive detection of tampered sensor inputs is vital for safe autonomous operation.
+\subsection{Research Objective}
+\label{sec:org3fa45e4}
+Develop a federated learning model to detect adversarial attacks on sensor data in autonomous vehicles, enhancing security without compromising privacy.
+\subsection{Methodology}
+\label{sec:orgc9a020e}
+\begin{itemize}
+\item Generate synthetic adversarial attack datasets using CARLA simulator, including LiDAR spoofing and camera perturbations.
+\item Train federated models on distributed vehicle data, preserving privacy and enabling collaborative learning.
+\item Evaluate detection accuracy and false positive rates in simulation and controlled real-world tests.
+\end{itemize}
+\subsection{Expected Contributions}
+\label{sec:orgade628c}
+\begin{itemize}
+\item Novel federated learning approach tailored for autonomous vehicle security.
+\item Dataset of adversarial sensor attacks for community use.
+\item Practical threat detection framework for automotive manufacturers.
+\end{itemize}
+\section{8. Privacy-Preserving Social Media Analytics}
+\label{sec:org73c9190}
+\subsection{Motivation}
+\label{sec:orgcb3725c}
+Social media platforms often expose user behavior data to third parties, risking privacy breaches. Ethical analysis requires frameworks that anonymize and secure collected data while maintaining analytic value.
+\subsection{Research Objective}
+\label{sec:orgad4efdc}
+Implement a differential privacy framework integrated with decentralized web scraping tools to conduct social media analytics without compromising individual user privacy.
+\subsection{Methodology}
+\label{sec:orge7b7a16}
+\begin{itemize}
+\item Utilize PySyft for decentralized data processing and privacy-preserving machine learning.
+\item Integrate with Scrapy spiders configured to minimize personal data capture and adhere to privacy laws.
+\item Develop mechanisms to inject differential privacy noise while preserving analytical utility.
+\item Demonstrate on real-world datasets analyzing behavioral trends.
+\end{itemize}
+\subsection{Expected Contributions}
+\label{sec:org23cd8ea}
+\begin{itemize}
+\item Scalable framework combining privacy and effective social data analytics.
+\item Open-source tools supporting GDPR and CCPA compliance.
+\item Case studies highlighting privacy-utility tradeoffs.
+\end{itemize}
+\section{9. AI-Generated Code Security Auditing}
+\label{sec:orgc965bcc}
+\subsection{Motivation}
+\label{sec:org2eb0a15}
+AI-generated code, increasingly prevalent via tools like GitHub Copilot, may unintentionally embed security flaws or malicious backdoors. Automated auditing is necessary to maintain code integrity.
+\subsection{Research Objective}
+\label{sec:org4211676}
+Create a static analysis tool augmented by machine learning trained to detect hidden malicious patterns in AI-generated procedural code, focusing on platforms like Unity Asset Store.
+\subsection{Methodology}
+\label{sec:org7e64123}
+\begin{itemize}
+\item Collect and label datasets containing malicious and benign Unity assets.
+\item Train ML classifiers to identify suspicious code structures and behaviors.
+\item Integrate the tool into developer workflows for real-time auditing.
+\item Validate efficacy in identifying stealth backdoors.
+\end{itemize}
+\subsection{Expected Contributions}
+\label{sec:org9ead3ac}
+\begin{itemize}
+\item Novel datasets for AI-generated code security research.
+\item Automated auditing tools to improve software supply chain security.
+\item Guidelines for safer AI-assisted software development.
+\end{itemize}
+\section{10. Web Scraping for Climate Risk Modeling}
+\label{sec:orgb7023d2}
+\subsection{Motivation}
+\label{sec:org0079a31}
+Climate data is dispersed across multiple sources, often lacking integration necessary for accurate flood and fire risk prediction. Automated data aggregation supports timely, localized risk assessments.
+\subsection{Research Objective}
+\label{sec:org031b4e0}
+Develop a comprehensive web scraping framework to aggregate climate data from APIs (NOAA, Wunderground) and satellite imagery for spatial-temporal analysis of flood and fire risks.
+\subsection{Methodology}
+\label{sec:org1d7f813}
+\begin{itemize}
+\item Implement scrapers using BeautifulSoup and API clients to gather heterogeneous data.
+\item Use GeoPandas for geospatial data processing and time series analysis.
+\item Combine with machine learning models to predict localized risk factors.
+\item Validate predictions with historical event data.
+\end{itemize}
+\subsection{Expected Contributions}
+\label{sec:org78e2980}
+\begin{itemize}
+\item Integrated climate data platform supporting disaster risk modeling.
+\item Methodologies for scraping and processing heterogeneous geospatial data.
+\item Open-source tools for climate researchers and policymakers.
+\end{itemize}
+\section{Evaluation Criteria}
+\label{sec:org8fe2d46}
+\begin{itemize}
+\item \textbf{\textbf{Feasibility:}} Preference for projects with accessible, open-source datasets (e.g., CIC-Darknet2025 for dark web analysis), and manageable resource requirements.
+\item \textbf{\textbf{Novelty:}} Emphasis on under-explored areas such as AR/VR security, homomorphic encryption in gaming, and federated learning in security contexts.
+\item \textbf{\textbf{Impact:}} Focus on high-demand industry problems including GDPR-compliant scraping, scalable anti-cheat technologies, and quantum-resistant cryptography for IoT.
+\end{itemize}
+\end{document}
